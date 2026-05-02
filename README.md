@@ -17,3 +17,36 @@ View the CV here (GitHub Pages):
 
 ## About Me
 I’m a **third-year ICT student majoring in Application Development** with a strong interest in building practical software solutions and continuously improving my technical skills.  
+I enjoy turning ideas into working applications, learning modern tools, and communicating technical concepts clearly.
+
+## What’s in this repo
+- **CV website** (HTML/CSS) — a black & white structure of my CV
+- **Mock interview** section — embedded/linked for easy viewing
+
+## Tech & Tools
+- **Frontend:** HTML, CSS, responsive design
+- **Deployment:** GitHub Pages
+- **General:** Git, GitHub
+
+## Mock Interview Video
+Depending on how it’s hosted, the mock interview is available in this way:
+- Embedded on the live site (recommended: **YouTube Unlisted** / Vimeo for fast load times)
+
+## Deploy (GitHub Pages)
+To publish/update the live CV:
+
+1. Go to **Settings** → **Pages**
+2. Under **Build and deployment**, set:
+   - **Source:** `Deploy from a branch`
+   - **Branch:** `main` (or `master`) and `/root`
+3. Save — GitHub will provide the live URL after the first build completes.
+
+## Contact
+- **Portfolio:** **https://www.jayteexaba.tech**
+- **LinkedIn:** https://za.linkedin.com/in/njanyana-xaba-8b6b69296
+- **Email:** contactus@jayteexaba.tech
+
+---
+
+### Notes for reviewers
+If you are reviewing this repository as part of an application, the fastest way to view my CV is through the **Live Site** link above.
