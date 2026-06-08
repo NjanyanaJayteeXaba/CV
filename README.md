@@ -42,9 +42,9 @@ To publish/update the live CV:
 3. Save — GitHub will provide the live URL after the first build completes.
 
 ## Contact
-- **Portfolio:** **https://www.jayteexaba.tech**
+- **Portfolio:** **https://www.jayteexaba.me**
 - **LinkedIn:** https://za.linkedin.com/in/njanyana-xaba-8b6b69296
-- **Email:** contactus@jayteexaba.tech
+- **Email:** contactus@jayteexaba.me
 
 ---
 
