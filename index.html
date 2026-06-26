@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Njanyana Laurence Xaba — CV</title>
+  <meta name="description" content="CV of Njanyana Laurence (JayTee) Xaba — 3rd-year ICT student majoring in Application Development at CPUT." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="JayTee Xaba — CV" />
+  <meta property="og:description" content="3rd-year ICT student majoring in Application Development. Portfolio, projects, and contact." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<style>
+/* =====================================================
+   JAYTEE XABA — CV  |  Blue accent
+   ===================================================== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue:#0969da;--blue-dark:#0550ae;--blue-light:#54aeff;
+  --blue-muted:#dbeafe;--blue-border:#bfdbfe;
+  --text:#0b0f14;--muted:#57606a;--border:#d0d7de;
+  --surface:#f6f8fa;--surface2:#ffffff;--dark:#0d1117;
+  --radius-sm:6px;--radius:12px;--radius-lg:16px;
+  --shadow-sm:0 1px 3px rgba(0,0,0,.06),0 1px 2px rgba(0,0,0,.04);
+  --shadow:0 4px 16px rgba(0,0,0,.07);
+  --t:.22s cubic-bezier(.4,0,.2,1);
+}
+html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased}
+body{
+  font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:15px;line-height:1.65;color:var(--text);
+  background:var(--surface);overflow-x:hidden;
+}
+body.no-scroll{overflow:hidden}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.body-text{font-size:.875rem;color:var(--muted);line-height:1.75}
+
+/* SPLASH */
+.splash{
+  position:fixed;inset:0;z-index:9999;background:var(--dark);
+  display:flex;align-items:center;justify-content:center;
+  transition:opacity .55s ease,visibility .55s;
+}
+.splash.hide{opacity:0;visibility:hidden;pointer-events:none}
+.splash-inner{
+  display:flex;flex-direction:column;align-items:center;gap:18px;
+  animation:splashUp .65s cubic-bezier(.4,0,.2,1) both;
+}
+@keyframes splashUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.splash-initials{
+  width:72px;height:72px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--blue-dark));
+  color:#fff;font-size:1.6rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  letter-spacing:.04em;
+  box-shadow:0 0 0 6px rgba(9,105,218,.18);
+  animation:splashPop .55s .15s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes splashPop{from{opacity:0;transform:scale(.5)}to{opacity:1;transform:scale(1)}}
+.splash-text{display:flex;flex-direction:column;align-items:center;gap:2px;animation:splashUp .55s .2s cubic-bezier(.4,0,.2,1) both}
+.splash-of{font-size:.75rem;font-weight:500;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.4)}
+.splash-name{font-size:2rem;font-weight:900;letter-spacing:-.02em;color:#fff}
+.splash-sub{font-size:.75rem;color:rgba(255,255,255,.3);letter-spacing:.04em;animation:splashUp .55s .35s cubic-bezier(.4,0,.2,1) both}
+.splash-bar-wrap{animation:splashUp .55s .3s cubic-bezier(.4,0,.2,1) both}
+.splash-bar{width:160px;height:2px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}
+.splash-progress{height:100%;width:0%;background:linear-gradient(90deg,var(--blue-dark),var(--blue),var(--blue-light));border-radius:999px;transition:width .08s linear}
+
+/* PAGE */
+.page{max-width:1120px;margin:0 auto;padding:32px 20px 64px}
+.fade-in{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+
+/* HEADER */
+.cv-header{
+  display:grid;grid-template-columns:1fr auto;gap:24px;align-items:start;
+  background:var(--surface2);border:1.5px solid var(--blue-border);
+  border-radius:var(--radius-lg);padding:24px 28px;
+  box-shadow:var(--shadow);margin-bottom:20px;position:relative;overflow:hidden;
+}
+.cv-header::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--blue-dark),var(--blue),var(--blue-light));
+}
+.header-left{display:flex;align-items:flex-start;gap:18px}
+.avatar{
+  width:60px;height:60px;border-radius:50%;
+  background:linear-gradient(135deg,var(--blue),var(--blue-dark));
+  color:#fff;font-size:1.1rem;font-weight:800;
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;letter-spacing:.04em;border:2px solid var(--blue-border);
+}
+.cv-name{font-size:clamp(1.4rem,3vw,1.9rem);font-weight:800;letter-spacing:-.025em;margin-bottom:4px;line-height:1.1}
+.cv-headline{font-size:.85rem;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:7px}
+.cv-headline i{color:var(--blue);font-size:.75rem}
+.cv-tags{display:flex;gap:8px;flex-wrap:wrap}
+.tag{display:inline-flex;align-items:center;gap:5px;font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:999px;background:var(--surface);border:1px solid var(--border);color:var(--muted)}
+.tag i{font-size:.65rem}
+.tag--blue{background:var(--blue-muted);border-color:var(--blue-border);color:var(--blue-dark)}
+.cv-contact{list-style:none;display:flex;flex-direction:column;gap:8px;font-size:.8rem;min-width:240px}
+.cv-contact li{display:flex;align-items:center;gap:9px;color:var(--text)}
+.cv-contact i{color:var(--blue);width:14px;font-size:.8rem;flex-shrink:0}
+.cv-contact a{color:var(--text);font-weight:500;transition:color var(--t)}
+.cv-contact a:hover{color:var(--blue);text-decoration:none}
+
+/* GRID */
+.cv-grid{display:grid;grid-template-columns:320px 1fr;gap:20px;align-items:start}
+
+/* CARDS */
+.card{
+  background:var(--surface2);border:1.5px solid var(--blue-border);
+  border-radius:var(--radius-lg);padding:20px 22px;
+  box-shadow:var(--shadow-sm);margin-bottom:16px;
+  transition:box-shadow var(--t);
+}
+.card:hover{box-shadow:var(--shadow)}
+.card:last-child{margin-bottom:0}
+.card-title{
+  font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:14px;display:flex;align-items:center;gap:7px;
+  padding-bottom:10px;border-bottom:1px solid var(--blue-border);
+}
+
+/* SKILLS */
+.skill-group-title{font-size:.75rem;font-weight:700;color:var(--text);margin:14px 0 8px}
+.skill-group-title:first-of-type{margin-top:2px}
+.skill-chips{list-style:none;display:flex;flex-wrap:wrap;gap:6px}
+.skill-chips li{font-size:.72rem;font-weight:500;padding:3px 10px;border-radius:999px;background:var(--blue-muted);border:1px solid var(--blue-border);color:var(--blue-dark)}
+
+/* TIMELINE */
+.timeline{list-style:none;position:relative;padding-left:20px}
+.timeline::before{content:'';position:absolute;left:6px;top:4px;bottom:4px;width:1.5px;background:var(--blue-border)}
+.timeline-item{position:relative;display:flex;gap:12px;padding-bottom:18px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-dot{position:absolute;left:-17px;top:5px;width:9px;height:9px;border-radius:50%;background:var(--surface2);border:2px solid var(--blue);flex-shrink:0}
+.timeline-item--active .timeline-dot{background:var(--blue)}
+.timeline-title{font-size:.83rem;font-weight:700;margin-bottom:2px}
+.timeline-meta{font-size:.75rem;color:var(--muted);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.badge{font-size:.65rem;font-weight:700;letter-spacing:.06em;padding:1px 7px;border-radius:999px;background:var(--blue);color:#fff;text-transform:uppercase}
+
+/* REFERENCES */
+.ref-item{padding:12px 0;border-bottom:1px solid var(--border)}
+.ref-item:last-child{border-bottom:none;padding-bottom:0}
+.ref-name{font-size:.85rem;font-weight:700}
+.ref-role{font-size:.75rem;color:var(--muted);margin-bottom:4px}
+.ref-tel{font-size:.75rem;color:var(--blue);display:flex;align-items:center;gap:5px}
+.ref-tel:hover{text-decoration:none;color:var(--blue-dark)}
+
+/* CONTENT */
+.content{display:flex;flex-direction:column}
+.content .card{margin-bottom:16px}
+.content .card:last-child{margin-bottom:0}
+
+/* PROJECTS */
+.project-card{
+  border:1px solid var(--border);border-radius:var(--radius);padding:16px;
+  margin-bottom:14px;background:var(--surface);
+  transition:border-color var(--t),box-shadow var(--t),transform var(--t);
+}
+.project-card:last-child{margin-bottom:0}
+.project-card:hover{border-color:var(--blue-border);box-shadow:0 4px 16px rgba(9,105,218,.08);transform:translateY(-2px)}
+.project-card--featured{border:1.5px solid var(--blue-border);background:linear-gradient(135deg,#f0f7ff 0%,#fff 60%);position:relative;overflow:hidden}
+.project-card--featured::before{
+  content:'★ Client Project';position:absolute;top:12px;right:12px;
+  font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--blue);background:var(--blue-muted);border:1px solid var(--blue-border);
+  padding:2px 9px;border-radius:999px;
+}
+.project-header{display:flex;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap}
+.project-logo-wrap{width:40px;height:40px;border-radius:8px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;padding:2px}
+.project-logo{width:100%;height:100%;object-fit:contain}
+.project-icon{width:40px;height:40px;border-radius:8px;background:var(--blue-muted);border:1px solid var(--blue-border);display:flex;align-items:center;justify-content:center;color:var(--blue);font-size:1rem;flex-shrink:0}
+.project-meta-block{flex:1;min-width:0}
+.project-title{font-size:.95rem;font-weight:700;margin-bottom:2px;letter-spacing:-.01em}
+.project-type{font-size:.72rem;color:var(--muted);display:flex;align-items:center;gap:5px}
+.project-type i{color:var(--blue);font-size:.65rem}
+.project-link{display:inline-flex;align-items:center;gap:5px;font-size:.75rem;font-weight:600;color:var(--blue);padding:5px 11px;border:1px solid var(--blue-border);border-radius:999px;background:var(--blue-muted);white-space:nowrap;transition:var(--t);flex-shrink:0}
+.project-link:hover{background:var(--blue);color:#fff;border-color:var(--blue);text-decoration:none}
+.project-link--ghost{background:transparent;border-color:var(--border);color:var(--muted)}
+.project-link--ghost:hover{background:var(--surface);color:var(--text);border-color:var(--border)}
+.project-links-multi{display:flex;gap:7px;flex-wrap:wrap;flex-shrink:0}
+.project-tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}
+.project-tags span{font-size:.68rem;font-weight:600;padding:2px 8px;border-radius:999px;background:var(--surface);border:1px solid var(--border);color:var(--muted)}
+.project-card--featured .project-tags span{background:var(--blue-muted);border-color:var(--blue-border);color:var(--blue-dark)}
+
+/* VIDEO */
+.video-wrap{border-radius:var(--radius);overflow:hidden;border:1.5px solid var(--blue-border);aspect-ratio:16/9;background:#000}
+.video-wrap iframe{width:100%;height:100%;display:block;border:0}
+
+/* FOOTER */
+.cv-footer{margin-top:28px;text-align:center;font-size:.75rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:4px}
+.cv-footer a{color:var(--blue)}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .cv-header{grid-template-columns:1fr}
+  .cv-contact{flex-direction:row;flex-wrap:wrap;gap:10px;min-width:0}
+  .cv-contact li{min-width:45%}
+  .cv-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .page{padding:16px 12px 48px}
+  .cv-header{padding:18px 16px}
+  .card{padding:16px}
+  .header-left{flex-direction:column;gap:12px}
+  .project-header{flex-wrap:wrap}
+  .cv-contact{flex-direction:column}
+  .cv-contact li{min-width:0}
+}
+@media print{
+  .splash{display:none!important}
+  body.no-scroll{overflow:auto}
+  .page{padding:0}
+  .card,.cv-header{box-shadow:none;border-color:#ccc}
+  a{color:var(--text)}
+  .fade-in{opacity:1;transform:none}
+}
+</style>
+</head>
+<body class="no-scroll">
+
+<!-- SPLASH -->
+<div id="splash" class="splash">
+  <div class="splash-inner">
+    <div class="splash-initials">JX</div>
+    <div class="splash-text">
+      <span class="splash-of">CV of</span>
+      <span class="splash-name">JayTee Xaba</span>
+    </div>
+    <div class="splash-bar-wrap">
+      <div class="splash-bar"><div class="splash-progress" id="splashProgress"></div></div>
+    </div>
+    <p class="splash-sub">Njanyana Laurence Xaba &nbsp;·&nbsp; ICT Application Development</p>
+  </div>
+</div>
+
+<!-- PAGE -->
+<main class="page">
+
+  <!-- HEADER -->
+  <header class="cv-header fade-in">
+    <div class="header-left">
+      <div class="avatar">JX</div>
+      <div>
+        <h1 class="cv-name">Njanyana Laurence Xaba</h1>
+        <p class="cv-headline">
+          <i class="fa-solid fa-code"></i>
+          3rd-year ICT Student &nbsp;·&nbsp; Application Development
+        </p>
+        <div class="cv-tags">
+          <span class="tag"><i class="fa-solid fa-location-dot"></i> Bellville South, Cape Town</span>
+          <span class="tag tag--blue"><i class="fa-solid fa-graduation-cap"></i> CPUT 2024–Present</span>
+        </div>
+      </div>
+    </div>
+    <ul class="cv-contact">
+      <li><i class="fa-solid fa-envelope"></i><a href="mailto:contactus@jayteexaba.me">contactus@jayteexaba.me</a></li>
+      <li><i class="fa-solid fa-phone"></i><span>064 060 3085</span></li>
+      <li><i class="fa-brands fa-linkedin"></i><a href="https://www.linkedin.com/in/njanyanajayteexaba" target="_blank" rel="noreferrer">linkedin.com/in/njanyanajayteexaba</a></li>
+      <li><i class="fa-brands fa-github"></i><a href="https://github.com/NjanyanaJayteeXaba" target="_blank" rel="noreferrer">github.com/NjanyanaJayteeXaba</a></li>
+      <li><i class="fa-solid fa-globe"></i><a href="https://www.jayteexaba.me" target="_blank" rel="noreferrer">www.jayteexaba.me</a></li>
+    </ul>
+  </header>
+
+  <!-- MAIN GRID -->
+  <div class="cv-grid">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar fade-in" style="animation-delay:.1s">
+
+      <section class="card">
+        <h2 class="card-title"><i class="fa-solid fa-bullseye"></i> Career Objective</h2>
+        <p class="body-text">
+          I am a driven third-year Information and Communication Technology student majoring in Application Development.
+          I'm seeking an opportunity to grow rapidly, contribute to real projects, and add value through strong
+          problem-solving and communication skills. My portfolio at
+          <a href="https://www.jayteexaba.me" target="_blank" rel="noreferrer">jayteexaba.me</a>
+          demonstrates my ability to design, build, and deploy functional applications independently and collaboratively.
+        </p>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title"><i class="fa-solid fa-screwdriver-wrench"></i> Technical Skills</h2>
+        <h3 class="skill-group-title">Languages</h3>
+        <ul class="skill-chips">
+          <li>Java</li><li>JavaScript</li><li>HTML5 / CSS3</li>
+          <li>TypeScript</li><li>SQL</li><li>Python</li>
+        </ul>
+        <h3 class="skill-group-title">Cloud — Digital Ocean</h3>
+        <ul class="skill-chips">
+          <li>Droplets VPS</li><li>IAM / Security</li><li>Cloud Storage</li>
+        </ul>
+        <h3 class="skill-group-title">Frontend &amp; Deployment</h3>
+        <ul class="skill-chips">
+          <li>Responsive Design</li><li>UI/UX Principles</li>
+          <li>Netlify</li><li>GitHub Pages</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title"><i class="fa-solid fa-graduation-cap"></i> Education</h2>
+        <ul class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-title">National Senior Certificate</div>
+              <div class="timeline-meta">Refeng Thabo Secondary School &nbsp;·&nbsp; 2021</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-title">Higher Certificate in ICT</div>
+              <div class="timeline-meta">Cape Peninsula University of Technology &nbsp;·&nbsp; 2023</div>
+            </div>
+          </li>
+          <li class="timeline-item timeline-item--active">
+            <div class="timeline-dot"></div>
+            <div>
+              <div class="timeline-title">Diploma in ICT — Application Development</div>
+              <div class="timeline-meta">Cape Peninsula University of Technology &nbsp;·&nbsp; 2024 – Present <span class="badge">3rd Year</span></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title"><i class="fa-solid fa-address-book"></i> References</h2>
+        <div class="ref-item">
+          <div class="ref-name">Mokoena M</div>
+          <div class="ref-role">Teacher — Refeng Thabo School</div>
+          <a href="tel:0822159773" class="ref-tel"><i class="fa-solid fa-phone"></i> 082 215 9773</a>
+        </div>
+        <div class="ref-item">
+          <div class="ref-name">Nhlapo SM</div>
+          <div class="ref-role">Principal — Refeng Thabo School</div>
+          <a href="tel:0659741512" class="ref-tel"><i class="fa-solid fa-phone"></i> 065 974 1512</a>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <section class="card fade-in" style="animation-delay:.15s">
+        <h2 class="card-title"><i class="fa-solid fa-folder-open"></i> Projects</h2>
+
+        <!-- Ravca Nautical — FEATURED -->
+        <article class="project-card project-card--featured">
+          <div class="project-header">
+            <div class="project-logo-wrap">
+              <img src="/cv/ravca-logo.png" alt="Ravca Nautical Logo" class="project-logo" onerror="this.style.display='none';this.parentElement.innerHTML='<i class=&quot;fa-solid fa-anchor&quot; style=&quot;color:#0969da;font-size:1.1rem&quot;></i>'" />
+            </div>
+            <div class="project-meta-block">
+              <h3 class="project-title">Ravca Nautical Assets</h3>
+              <span class="project-type"><i class="fa-solid fa-globe"></i> Landing Page &amp; Brand Identity</span>
+            </div>
+            <a href="https://ravcanautical.co.za" target="_blank" rel="noreferrer" class="project-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site
+            </a>
+          </div>
+          <p class="body-text">
+            Designed and developed a full premium landing page for Ravca Nautical Assets — a Cape Town-based maritime supply
+            and consulting company. Built in pure HTML, CSS, and JavaScript with a full brand colour system derived from the
+            client's logo (red, charcoal, steel). Features include a branded splash screen, animated counters, a drag-and-swipe
+            testimonials carousel, Font Awesome icons, Schema.org structured data for SEO, and full mobile responsiveness.
+            Deployed as a static site compatible with GitHub Pages.
+          </p>
+          <div class="project-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+            <span>SEO</span><span>Responsive Design</span><span>GitHub Pages</span>
+          </div>
+        </article>
+
+        <!-- SideHustle Pro -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+            <div class="project-meta-block">
+              <h3 class="project-title">SideHustle Pro</h3>
+              <span class="project-type"><i class="fa-solid fa-laptop-code"></i> Client-Side Web Application</span>
+            </div>
+            <a href="https://www.sidehustlepro.social" target="_blank" rel="noreferrer" class="project-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Site
+            </a>
+          </div>
+          <p class="body-text">
+            Developed a fully functional web application enabling student entrepreneurs to generate dynamic invoices,
+            calculate totals, and export clean PDFs directly from the browser. Engineered seamless WhatsApp integration
+            for instant document sharing without requiring user accounts. Planning next phase to transition to a full-stack
+            environment using Clerk, Appwrite, and Llama 3 AI.
+          </p>
+          <div class="project-tags">
+            <span>JavaScript</span><span>PDF Export</span><span>WhatsApp API</span>
+          </div>
+        </article>
+
+        <!-- Module Tracker -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+            <div class="project-meta-block">
+              <h3 class="project-title">Module Tracker</h3>
+              <span class="project-type"><i class="fa-solid fa-users"></i> Academic Team Project</span>
+            </div>
+            <div class="project-links-multi">
+              <a href="https://njanyanajayteexaba.github.io/PrototypeModuleTrackerUI_interface/" target="_blank" rel="noreferrer" class="project-link project-link--ghost">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Original
+              </a>
+              <a href="https://moduletrackercput.netlify.app" target="_blank" rel="noreferrer" class="project-link">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i> Modern UI
+              </a>
+            </div>
+          </div>
+          <p class="body-text">
+            Collaborated with a team in 2nd Year to design and develop a Module Tracker application helping students
+            organise coursework and monitor academic progress.
+          </p>
+          <div class="project-tags">
+            <span>Team Project</span><span>UI/UX</span><span>Netlify</span>
+          </div>
+        </article>
+
+        <!-- InternConnect -->
+        <article class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-brands fa-figma"></i></div>
+            <div class="project-meta-block">
+              <h3 class="project-title">InternConnect Platform UI</h3>
+              <span class="project-type"><i class="fa-solid fa-pen-ruler"></i> UI/UX Design Project</span>
+            </div>
+            <a href="https://www.figma.com/proto/CHzFkE2rofOsEAnWwHCr5G?node-id=148:2" target="_blank" rel="noreferrer" class="project-link">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Prototype
+            </a>
+          </div>
+          <p class="body-text">
+            Designed a comprehensive user interface in Figma for the InternConnect platform, featuring dedicated dashboard
+            experiences for students, companies, and administrators to easily organise internship placements. Active work in progress.
+          </p>
+          <div class="project-tags">
+            <span>Figma</span><span>UX Research</span><span>Prototyping</span>
+          </div>
+        </article>
+      </section>
+
+      <!-- Mock Interview -->
+      <section class="card fade-in" style="animation-delay:.2s">
+        <h2 class="card-title"><i class="fa-solid fa-video"></i> Mock Interview</h2>
+        <div class="video-wrap">
+          <iframe
+            src="https://www.youtube.com/embed/wKGCMQNsJ-8"
+            title="Mock Interview — Njanyana JayTee Xaba"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <footer class="cv-footer fade-in">
+    <span><i class="fa-regular fa-calendar"></i> Last updated: June 2026</span>
+    <span>&nbsp;·&nbsp;</span>
+    <a href="https://www.jayteexaba.me" target="_blank" rel="noreferrer">
+      <i class="fa-solid fa-globe"></i> jayteexaba.me
+    </a>
+  </footer>
+</main>
+
+<script>
+(function(){
+  var splash=document.getElementById('splash');
+  var progress=document.getElementById('splashProgress');
+  if(!splash||!progress)return;
+  var DURATION=2000,start=performance.now();
+  function tick(now){
+    var pct=Math.min(((now-start)/DURATION)*100,100);
+    progress.style.width=pct+'%';
+    if(pct<100){requestAnimationFrame(tick);}
+    else{
+      setTimeout(function(){
+        splash.classList.add('hide');
+        document.body.classList.remove('no-scroll');
+        splash.addEventListener('transitionend',function(){
+          splash.remove();
+          var els=document.querySelectorAll('.fade-in');
+          els.forEach(function(el,i){
+            var delay=parseFloat(el.style.animationDelay||'0')*1000||i*60;
+            setTimeout(function(){el.classList.add('visible')},delay);
+          });
+        },{once:true});
+      },180);
+    }
+  }
+  requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>
